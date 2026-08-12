@@ -1,0 +1,1 @@
+Compilación inicial del Reloj 12 Casas para Galaxy Watch7 SM-L310.
