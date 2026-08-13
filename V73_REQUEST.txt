@@ -1,0 +1,1 @@
+V7.3: reemplazar bloques azules por llamas animadas; reloj digital 12h; escala analógica estándar 00-55; corregir dirección de apagado de casas según referencia.
