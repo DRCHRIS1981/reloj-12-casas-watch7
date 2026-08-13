@@ -10,7 +10,7 @@ android {
         applicationId = "com.drchris.reloj12casas"
         minSdk = 33
         targetSdk = 35
-        versionCode = 8
-        versionName = "7.1"
+        versionCode = 9
+        versionName = "7.2"
     }
 }
