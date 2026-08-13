@@ -14,3 +14,12 @@ android {
         versionName = "7.5"
     }
 }
+
+val prepareWatchFace by tasks.registering(Exec::class) {
+    workingDir(rootProject.projectDir)
+    commandLine("python3", "tools/build_v75.py")
+}
+
+tasks.matching { it.name == "preBuild" }.configureEach {
+    dependsOn(prepareWatchFace)
+}
