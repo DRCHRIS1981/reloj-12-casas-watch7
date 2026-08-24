@@ -3,7 +3,12 @@ name: Compilar AAB Google Play
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'dist/**'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -22,9 +27,20 @@ jobs:
           gradle-version: '8.9'
       - name: Compilar AAB release
         run: gradle :app:bundleRelease --stacktrace
-      - name: Subir AAB
+      - name: Copiar AAB a dist
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/bundle/release/app-release.aab dist/reloj-12-casas-unsigned.aab
+      - name: Publicar AAB generado en el repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/reloj-12-casas-unsigned.aab
+          git commit -m "Build AAB Google Play [skip ci]" || exit 0
+          git push
+      - name: Subir AAB como artifact
         uses: actions/upload-artifact@v4
         with:
           name: Reloj-12-Casas-AAB
-          path: app/build/outputs/bundle/release/app-release.aab
+          path: dist/reloj-12-casas-unsigned.aab
           if-no-files-found: error
