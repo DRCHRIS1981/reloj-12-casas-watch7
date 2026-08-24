@@ -27,6 +27,26 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
+      - name: Reparar PNG heredados
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageFile
+          ImageFile.LOAD_TRUNCATED_IMAGES = True
+          root = Path('app/src/main/res/drawable')
+          for name in ('dial_v2.png', 'flame_v3.png'):
+              p = root / name
+              im = Image.open(p).convert('RGBA')
+              tmp = root / (p.stem + '_fixed.png')
+              im.save(tmp, format='PNG', optimize=True, compress_level=9)
+              tmp.replace(p)
+              print('Reparado', p, p.stat().st_size, 'bytes')
+          unused = root / 'dial_v3.png'
+          if unused.exists():
+              unused.unlink()
+              print('Eliminado recurso corrupto no utilizado:', unused)
+          PY
       - name: Compilar AAB release
         run: gradle :app:bundleRelease --stacktrace
       - name: Copiar AAB a dist
