@@ -10,13 +10,19 @@ android {
         applicationId = "com.drchris.reloj12casas"
         minSdk = 34
         targetSdk = 35
-        versionCode = 15
-        versionName = "8.0"
+        versionCode = 16
+        versionName = "8.1"
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = true
+        }
         release {
-            isMinifyEnabled = false
+            // WFF bundles must be resource-only. Minification removes the
+            // generated R classes so the final AAB contains no classes.dex.
+            isMinifyEnabled = true
+            isShrinkResources = false
         }
     }
 }
