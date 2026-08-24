@@ -47,8 +47,29 @@ jobs:
               unused.unlink()
               print('Eliminado recurso corrupto no utilizado:', unused)
           PY
+      - name: Ajustar XML para WFF2
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('app/src/main/res/raw/watchface.xml')
+          text = p.read_text(encoding='utf-8')
+          n = text.count(' verticalAlign="CENTER"')
+          text = text.replace(' verticalAlign="CENTER"', '')
+          p.write_text(text, encoding='utf-8')
+          print('verticalAlign eliminado:', n, 'ocurrencias')
+          if 'verticalAlign=' in text:
+              raise SystemExit('Aun quedan atributos verticalAlign en watchface.xml')
+          PY
       - name: Compilar AAB release
         run: gradle :app:bundleRelease --stacktrace
+      - name: Verificar bundle WFF
+        run: |
+          unzip -l app/build/outputs/bundle/release/app-release.aab | tee /tmp/aab-list.txt
+          if grep -E '(^|/)classes[0-9]*\.dex$|(^|/)dex/' /tmp/aab-list.txt; then
+            echo 'ERROR: el AAB contiene DEX'
+            exit 1
+          fi
+          echo 'OK: AAB sin DEX'
       - name: Copiar AAB a dist
         run: |
           mkdir -p dist
