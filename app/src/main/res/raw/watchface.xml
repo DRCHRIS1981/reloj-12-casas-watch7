@@ -1,67 +1,315 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WatchFace width="450" height="450" clipShape="CIRCLE">
-<Metadata key="CLOCK_TYPE" value="DIGITAL"/>
-<Metadata key="PREVIEW_TIME" value="12:45:30"/>
-<Scene backgroundColor="#FF000000">
-<PartDraw x="0" y="0" width="450" height="450">
-<Ellipse x="7" y="7" width="436" height="436"><Stroke color="#FF303438" thickness="5"/></Ellipse>
-<Ellipse x="14" y="14" width="422" height="422"><Stroke color="#FFF2EAF3" thickness="2"/></Ellipse>
-<Ellipse x="79" y="79" width="292" height="292"><Stroke color="#FFF2EAF3" thickness="2"/></Ellipse>
-<Ellipse x="126" y="126" width="198" height="198"><Stroke color="#FFF2EAF3" thickness="2"/></Ellipse>
-<Ellipse x="145" y="145" width="160" height="160"><Stroke color="#FF4B4E53" thickness="2"/></Ellipse>
-<Line startX="194" startY="111" endX="170" endY="19"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="256" startY="111" endX="280" endY="19"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="315" startY="135" endX="382" endY="68"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="339" startY="194" endX="431" endY="170"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="339" startY="256" endX="431" endY="280"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="315" startY="315" endX="382" endY="382"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="256" startY="339" endX="280" endY="431"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="194" startY="339" endX="170" endY="431"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="135" startY="315" endX="68" endY="382"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="111" startY="256" endX="19" endY="280"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="111" startY="194" endX="19" endY="170"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-<Line startX="135" startY="135" endX="68" endY="68"><Stroke color="#FFF4ECF6" thickness="2"/></Line>
-</PartDraw>
-<Group name="flame1" x="198" y="14" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 12 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+0))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+17))"/><Transform target="angle" value="2*sin(rad([SECOND_MILLISECOND]*0.08+9))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame2" x="292" y="39" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 11 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+29))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+46))"/><Transform target="angle" value="30+2*sin(rad([SECOND_MILLISECOND]*0.08+38))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame3" x="361" y="108" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 10 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+58))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+75))"/><Transform target="angle" value="60+2*sin(rad([SECOND_MILLISECOND]*0.08+67))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame4" x="386" y="190" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 9 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+87))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+104))"/><Transform target="angle" value="90+2*sin(rad([SECOND_MILLISECOND]*0.08+96))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame5" x="361" y="272" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 8 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+116))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+133))"/><Transform target="angle" value="120+2*sin(rad([SECOND_MILLISECOND]*0.08+125))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame6" x="292" y="341" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 7 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+145))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+162))"/><Transform target="angle" value="150+2*sin(rad([SECOND_MILLISECOND]*0.08+154))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame7" x="198" y="366" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 6 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+174))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+191))"/><Transform target="angle" value="180+2*sin(rad([SECOND_MILLISECOND]*0.08+183))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame8" x="104" y="341" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 5 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+203))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+220))"/><Transform target="angle" value="210+2*sin(rad([SECOND_MILLISECOND]*0.08+212))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame9" x="35" y="272" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 4 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+232))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+249))"/><Transform target="angle" value="240+2*sin(rad([SECOND_MILLISECOND]*0.08+241))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame10" x="10" y="190" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 3 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+261))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+278))"/><Transform target="angle" value="270+2*sin(rad([SECOND_MILLISECOND]*0.08+270))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame11" x="35" y="108" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 2 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+290))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+307))"/><Transform target="angle" value="300+2*sin(rad([SECOND_MILLISECOND]*0.08+299))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<Group name="flame12" x="104" y="39" width="54" height="70" pivotX="0.5" pivotY="0.70"><Transform target="alpha" value="[HOUR_0_11] &lt; 1 ? 255 : 0"/><Transform target="scaleY" value="1+0.08*sin(rad([SECOND_MILLISECOND]*0.10+319))"/><Transform target="scaleX" value="1+0.04*cos(rad([SECOND_MILLISECOND]*0.13+336))"/><Transform target="angle" value="330+2*sin(rad([SECOND_MILLISECOND]*0.08+328))"/><Variant mode="AMBIENT" target="alpha" value="0"/><PartImage x="0" y="0" width="54" height="70"><Image resource="flame_v3"/></PartImage></Group>
-<PartText x="199" y="73" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♈︎</Font></Text></PartText><PartText x="183" y="61" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">ARIES</Font></Text></PartText>
-<PartText x="265" y="91" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♉︎</Font></Text></PartText><PartText x="262" y="82" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">TAURO</Font></Text></PartText>
-<PartText x="313" y="139" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♊︎</Font></Text></PartText><PartText x="319" y="139" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">GÉMINIS</Font></Text></PartText>
-<PartText x="331" y="201" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♋︎</Font></Text></PartText><PartText x="341" y="216" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">CÁNCER</Font></Text></PartText>
-<PartText x="313" y="263" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♌︎</Font></Text></PartText><PartText x="319" y="293" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">LEO</Font></Text></PartText>
-<PartText x="265" y="311" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♍︎</Font></Text></PartText><PartText x="262" y="350" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">VIRGO</Font></Text></PartText>
-<PartText x="199" y="329" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♎︎</Font></Text></PartText><PartText x="183" y="371" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">LIBRA</Font></Text></PartText>
-<PartText x="133" y="311" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♏︎</Font></Text></PartText><PartText x="104" y="350" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">ESCORPIO</Font></Text></PartText>
-<PartText x="85" y="263" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♐︎</Font></Text></PartText><PartText x="46" y="293" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">SAGITARIO</Font></Text></PartText>
-<PartText x="67" y="201" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♑︎</Font></Text></PartText><PartText x="25" y="216" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="9" color="#FFF7EFF8">CAPRICORNIO</Font></Text></PartText>
-<PartText x="85" y="139" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♒︎</Font></Text></PartText><PartText x="46" y="139" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">ACUARIO</Font></Text></PartText>
-<PartText x="133" y="91" width="52" height="48"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="33" color="#FFF7EFF8" weight="MEDIUM">♓︎</Font></Text></PartText><PartText x="104" y="82" width="84" height="18"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="10" color="#FFF7EFF8">PISCIS</Font></Text></PartText>
-<PartText x="209" y="111" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">00</Font></Text></PartText>
-<PartText x="260" y="125" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">05</Font></Text></PartText>
-<PartText x="298" y="163" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">10</Font></Text></PartText>
-<PartText x="312" y="215" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">15</Font></Text></PartText>
-<PartText x="298" y="266" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">20</Font></Text></PartText>
-<PartText x="260" y="304" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">25</Font></Text></PartText>
-<PartText x="209" y="318" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">30</Font></Text></PartText>
-<PartText x="158" y="304" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">35</Font></Text></PartText>
-<PartText x="120" y="266" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">40</Font></Text></PartText>
-<PartText x="106" y="215" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">45</Font></Text></PartText>
-<PartText x="120" y="163" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">50</Font></Text></PartText>
-<PartText x="158" y="125" width="32" height="20"><Text align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="13" color="#FF00E8F2">55</Font></Text></PartText>
-<Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[MINUTE] * 6"/><PartDraw x="0" y="0" width="450" height="450"><Ellipse x="218" y="105" width="14" height="14"><Fill color="#FF00E8F2"/></Ellipse></PartDraw></Group>
-<Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5"><Transform target="angle" value="[HOUR_0_11] * 30 + [MINUTE] / 2"/><PartDraw x="0" y="0" width="450" height="450"><Ellipse x="217" y="10" width="16" height="16"><Fill color="#FFFF6A00"/></Ellipse></PartDraw></Group>
-<PartDraw x="0" y="0" width="450" height="450"><Ellipse x="148" y="148" width="154" height="154"><Fill color="#FF010203"/><Stroke color="#FFF2EAF3" thickness="3"/></Ellipse><Ellipse x="155" y="155" width="140" height="140"><Stroke color="#FF4A4C52" thickness="2"/></Ellipse></PartDraw>
-<DigitalClock x="145" y="178" width="160" height="60"><TimeText x="0" y="0" width="160" height="60" format="h:mm" hourFormat="12" align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="42" color="#FF00E8F2" weight="MEDIUM"/></TimeText></DigitalClock>
-<DigitalClock x="185" y="232" width="80" height="38"><TimeText x="0" y="0" width="80" height="38" format="ss" hourFormat="12" align="CENTER" verticalAlign="CENTER"><Font family="SYNC_TO_DEVICE" size="25" color="#FF00E8F2"/></TimeText></DigitalClock>
-</Scene>
+  <Metadata key="CLOCK_TYPE" value="DIGITAL"/>
+  <Metadata key="PREVIEW_TIME" value="12:45:30"/>
+  <Scene backgroundColor="#FF000000">
+
+    <PartImage x="0" y="0" width="450" height="450">
+      <Image resource="dial_v2"/>
+    </PartImage>
+
+    <Group name="flame_12" x="201" y="4" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="0" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 0) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 0) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="0 + (([SECOND] + 0) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group><Condition>
+      <Expressions>
+        <Expression name="show_flame_1"><![CDATA[[HOUR_0_11] < 1]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_1">
+        <Group name="flame_1" x="296" y="29" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="30" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 1) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 1) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="30 + (([SECOND] + 1) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_2"><![CDATA[[HOUR_0_11] < 2]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_2">
+        <Group name="flame_2" x="366" y="99" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="60" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 0) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 0) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="60 + (([SECOND] + 0) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_3"><![CDATA[[HOUR_0_11] < 3]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_3">
+        <Group name="flame_3" x="391" y="194" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="90" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 1) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 1) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="90 + (([SECOND] + 1) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_4"><![CDATA[[HOUR_0_11] < 4]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_4">
+        <Group name="flame_4" x="366" y="289" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="120" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 0) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 0) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="120 + (([SECOND] + 0) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_5"><![CDATA[[HOUR_0_11] < 5]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_5">
+        <Group name="flame_5" x="296" y="359" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="150" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 1) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 1) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="150 + (([SECOND] + 1) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_6"><![CDATA[[HOUR_0_11] < 6]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_6">
+        <Group name="flame_6" x="201" y="384" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="180" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 0) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 0) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="180 + (([SECOND] + 0) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_7"><![CDATA[[HOUR_0_11] < 7]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_7">
+        <Group name="flame_7" x="106" y="359" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="210" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 1) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 1) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="210 + (([SECOND] + 1) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_8"><![CDATA[[HOUR_0_11] < 8]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_8">
+        <Group name="flame_8" x="36" y="289" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="240" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 0) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 0) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="240 + (([SECOND] + 0) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_9"><![CDATA[[HOUR_0_11] < 9]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_9">
+        <Group name="flame_9" x="11" y="194" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="270" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 1) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 1) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="270 + (([SECOND] + 1) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_10"><![CDATA[[HOUR_0_11] < 10]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_10">
+        <Group name="flame_10" x="36" y="99" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="300" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 0) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 0) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="300 + (([SECOND] + 0) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition><Condition>
+      <Expressions>
+        <Expression name="show_flame_11"><![CDATA[[HOUR_0_11] < 11]]></Expression>
+      </Expressions>
+      <Compare expression="show_flame_11">
+        <Group name="flame_11" x="106" y="29" width="48" height="62"
+              pivotX="0.5" pivotY="0.78" angle="330" scaleX="1" scaleY="1">
+      <Transform target="scaleY" value="([SECOND] + 1) % 2 == 0 ? 0.88 : 1.12">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="scaleX" value="([SECOND] + 1) % 2 == 0 ? 1.05 : 0.93">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Transform target="angle" value="330 + (([SECOND] + 1) % 2 == 0 ? -2.5 : 2.5)">
+        <Animation duration="0.45" interpolation="EASE_IN_OUT"/>
+      </Transform>
+      <Variant mode="AMBIENT" target="alpha" value="0"/>
+      <PartImage x="0" y="0" width="48" height="62">
+        <Image resource="flame_v3"/>
+      </PartImage>
+    </Group>
+      </Compare>
+    </Condition>
+
+    <Group name="minute_indicator" x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5">
+      <Transform target="angle" value="[MINUTE] * 6 + [SECOND] / 10 - 90"/>
+      <PartDraw x="0" y="0" width="450" height="450">
+        <Line startX="225" startY="225" endX="297" endY="225">
+          <Stroke color="#FF20EFF8" thickness="4"/>
+        </Line>
+      </PartDraw>
+    </Group>
+
+    <Group name="hour_indicator" x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5">
+      <Transform target="angle" value="[HOUR_0_11] * 30 + [MINUTE] / 2 - 90"/>
+      <PartDraw x="0" y="0" width="450" height="450">
+        <Line startX="225" startY="225" endX="284" endY="225">
+          <Stroke color="#FFFF8A00" thickness="5"/>
+        </Line>
+      </PartDraw>
+    </Group>
+
+    <PartDraw x="0" y="0" width="450" height="450">
+      <Ellipse x="178" y="178" width="94" height="94">
+        <Fill color="#FF020609"/>
+        <Stroke color="#FFEEF4FF" thickness="2"/>
+      </Ellipse>
+      <Ellipse x="181" y="181" width="88" height="88">
+        <Stroke color="#6620F5FF" thickness="2"/>
+      </Ellipse>
+      <Ellipse x="221" y="221" width="8" height="8">
+        <Fill color="#FFFFFFFF"/>
+      </Ellipse>
+    </PartDraw>
+
+    <DigitalClock x="181" y="194" width="88" height="36">
+      <TimeText x="0" y="0" width="88" height="36" format="h:mm" hourFormat="12"
+                align="CENTER" verticalAlign="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="26" color="#FF16F4FF" weight="MEDIUM"/>
+      </TimeText>
+    </DigitalClock>
+
+    <DigitalClock x="197" y="229" width="56" height="25">
+      <TimeText x="0" y="0" width="56" height="25" format="ss" hourFormat="12"
+                align="CENTER" verticalAlign="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="17" color="#FF16F4FF"/>
+      </TimeText>
+    </DigitalClock>
+  </Scene>
 </WatchFace>

@@ -8,18 +8,15 @@ android {
 
     defaultConfig {
         applicationId = "com.drchris.reloj12casas"
-        minSdk = 33
+        minSdk = 34
         targetSdk = 35
-        versionCode = 14
-        versionName = "7.7"
+        versionCode = 15
+        versionName = "8.0"
     }
-}
 
-val prepareWatchFace by tasks.registering(Exec::class) {
-    workingDir(rootProject.projectDir)
-    commandLine("python3", "tools/build_v75.py")
-}
-
-tasks.matching { it.name == "preBuild" }.configureEach {
-    dependsOn(prepareWatchFace)
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+        }
+    }
 }
