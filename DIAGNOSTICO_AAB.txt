@@ -1,0 +1,2 @@
+Diagnóstico de compilación AAB para Google Play - 2026-08-24
+Reintento después de reparar PNG heredados.
